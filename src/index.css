@@ -44,6 +44,21 @@
     #33bbcf 90.29%
   );
 }
+.bg-dark-blue-gradient {
+  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
+}
+
+.bg-dark-blue-gradient-2 {
+  background: linear-gradient(
+    90deg,
+    rgba(26, 41, 128, 0.5) 0%,
+    rgba(38, 208, 206, 0.5) 100%
+  );
+}
+
+.bg-pink {
+  background: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
+}
 
 .bg-black-gradient {
   background: linear-gradient(
