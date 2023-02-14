@@ -145,3 +145,11 @@
 a {
   cursor: pointer;
 }
+
+.side-line::after {
+  content: "";
+  width: 10px;
+  height: 19px;
+  background-color: white;
+  position: absolute;
+}

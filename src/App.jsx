@@ -13,16 +13,18 @@ import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    <div className="bg-primary flex flex-col gap-5">
-      <Navbar />
-      <Hero />
-      <Features />
-      <Product />
-      <ProductTwo />
-      <Clients />
-      <Clientstwo />
-      <Tray />
-      <Footer />
+    <div className="flex flex-col gap-5 bg-primary md:gap-[4rem]">
+      <div className="max-w-[74rem] flex flex-col m-auto">
+        <Navbar />
+        <Hero />
+        <Features />
+        <Product />
+        <ProductTwo />
+        <Clients />
+        <Clientstwo />
+        <Tray />
+        <Footer />
+      </div>
     </div>
   );
 };
