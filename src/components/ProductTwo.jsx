@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "./Button";
+import { card } from "../assets";
 
 const ProductTwo = () => {
   return (
@@ -15,7 +16,7 @@ const ProductTwo = () => {
         <Button />
       </div>
       <div className="md:basis-[50%]">
-        <img src=".././assets/card.png" />
+        <img src={card} />
       </div>
     </div>
   );

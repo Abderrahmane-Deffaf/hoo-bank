@@ -1,5 +1,6 @@
 import React from 'react'
 import { feedback } from '../constants/constants';
+import { quotes } from '../assets';
 
 const Clients = () => {
   return (
@@ -18,7 +19,7 @@ const Clients = () => {
           feedback.map((Element) => {
             return (
               <div className="feedback-card p-5 rounded-[20px] flex flex-col gap-5 justify-between ss:basis-[49%] md:basis-[32%]">
-                <img className='w-1/5' src=".././assets/quotes.svg" />
+                <img className='w-1/5' src={quotes} />
                 <p className="text-white">{Element.content}</p>
                 <div className="flex items-center">
                   <img src={Element.img} className='w-1/3 mr-4'/>

@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { navLinks } from "../constants/constants";
 import ".././index.css";
-import { close, menu } from "../assets";
+import { close, menu,logo } from "../assets";
 
 const Navbar = () => {
   const [drop, setDrop] = useState(false);
@@ -13,7 +13,11 @@ const Navbar = () => {
       <ul className="flex w-full justify-between ss:w-[40%]">
         <li>
           <a href="#Hero">
-            <img className="ss:w-2/3 md:w-full" src="../assets/logo.svg" alt="hoo bank logo" />
+            <img
+              className="ss:w-2/3 md:w-full"
+              src={logo}
+              alt="hoo bank logo"
+            />
           </a>
         </li>
         <li
@@ -36,12 +40,16 @@ const Navbar = () => {
         </li>
       </ul>
 
-      <ul className="bg-black-gradient absolute top-[100%] z-[6] flex w-[90%] flex-col gap-[1rem] rounded-[20px] text-white ss:w-[60%] ss:relative ss:flex-row ss:bg-none ss:gap-5 ss:justify-end">
+      <ul className="bg-black-gradient absolute top-[100%] z-[6] flex w-[90%] flex-col gap-[1rem] rounded-[20px] text-white ss:relative ss:w-[60%] ss:flex-row ss:justify-end ss:gap-5 ss:bg-none">
         {navLinks.map((Element) => {
           if (drop || window.innerWidth >= 600) {
             return (
               <li className="w-fit text-center first:mt-5 last:mb-5 ss:first:mt-0 ss:last:mb-0">
-                <a className="text-xl sm:text-2xl md:text-4xl" href={Element.href} id={Element.id}>
+                <a
+                  className="text-xl sm:text-2xl "
+                  href={Element.href}
+                  id={Element.id}
+                >
                   {Element.title}
                 </a>
               </li>

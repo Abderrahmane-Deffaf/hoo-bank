@@ -1,5 +1,6 @@
 import React from "react";
 import { stats } from "../constants/constants";
+import { arrowUp, discount, robot} from "../assets";
 
 const Hero = () => {
   return (
@@ -7,7 +8,7 @@ const Hero = () => {
       <div className="flex flex-col  gap-[1rem] md:flex-row">
         <div className="relative flex flex-col gap-[1rem] md:justify-end md:basis-[50%] md:gap-[2rem]">
           <div className="bg-discount-gradient flex w-fit items-center rounded-xl p-1">
-            <img src=".././assets/Discount.svg" />
+            <img src={discount} />
             <p className=" ml-1 text-gray-400 sm:text-2xl md:text-xl">
               <span className=" text-white">20%</span> DISCOUNT FOR
               <span className="text-white ">1 MONTH</span> ACCOUNT
@@ -32,14 +33,14 @@ const Hero = () => {
                 </h2>
                 <img
                   className="absolute top-[1rem] right-[1.4rem] xs:top-[1.8rem] xs:right-[2rem] sm:top-[2.3rem]"
-                  src=".././assets/arrow-up.svg"
+                  src={arrowUp}
                 />
               </div>
             </div>
           </a>
         </div>
         <div className="relative md:basis-[50%]">
-          <img className="relative z-[5] w-full" src=".././assets/robot.png" />
+          <img className="relative z-[5] w-full" src={robot} />
           <div className="absolute top-[70%] left-[28%] z-[0] h-[4rem] w-[50%] bg-gray-400 blur-[7rem] "></div>
           <div className="bg-pink absolute top-[20%] left-[30%] z-[0] h-[40%] w-[145px] blur-[7rem]"></div>
         </div>

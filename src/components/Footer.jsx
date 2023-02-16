@@ -1,5 +1,6 @@
 import React from "react";
 import { footerLinks, socialMedia } from "../constants/constants";
+import { logo } from "../assets";
 
 const Footer = () => {
   return (
@@ -8,7 +9,7 @@ const Footer = () => {
         <div className="flex flex-col gap-3">
           <img
             className="w-2/3 ss:w-1/2 md:w-full"
-            src=".././assets/logo.svg"
+            src={logo}
             alt="hoobank logo"
           />
           <p className="text-gray-400 md:text-xl">
