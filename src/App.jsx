@@ -1,7 +1,7 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import Navbar from "./components/navBar";
+import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Features from "./components/Features";
 import Product from "./components/Product";
@@ -14,7 +14,7 @@ import Footer from "./components/Footer";
 const App = () => {
   return (
     <div className="flex flex-col gap-5 bg-primary md:gap-[4rem]">
-      <div className="max-w-[74rem] flex flex-col m-auto">
+      <div className="m-auto flex max-w-[74rem] flex-col">
         <Navbar />
         <Hero />
         <Features />
