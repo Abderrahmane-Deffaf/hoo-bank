@@ -1,14 +1,14 @@
 import React from "react";
 import { stats } from "../constants/constants";
-import { arrowUp, discount, robot} from "../assets";
+import { arrowUp, discount, robot } from "..";
 
 const Hero = () => {
   return (
-    <div className="z-1 relative p-[1rem] " id="Hero">
+    <div className=" relative p-[1rem] " style={{zIndex:1}} id="Hero">
       <div className="flex flex-col  gap-[1rem] md:flex-row">
-        <div className="relative flex flex-col gap-[1rem] md:justify-end md:basis-[50%] md:gap-[2rem]">
+        <div className="relative flex flex-col gap-[1rem] md:basis-[50%] md:justify-end md:gap-[2rem]">
           <div className="bg-discount-gradient flex w-fit items-center rounded-xl p-1">
-            <img src={discount} />
+            <img src={discount} alt="discount" />
             <p className=" ml-1 text-gray-400 sm:text-2xl md:text-xl">
               <span className=" text-white">20%</span> DISCOUNT FOR
               <span className="text-white ">1 MONTH</span> ACCOUNT
@@ -25,36 +25,41 @@ const Hero = () => {
             annual fees.
           </p>
           <div className="absolute -left-[9rem] top-[3rem] z-[0] h-[9rem] w-[12rem] rounded-full bg-white blur-[170px] md:top-[50%]"></div>
-          <a>
-            <div className="bg-blue-gradient absolute right-0 top-[20%] w-fit rounded-full p-[2px] xs:left-[70%] md:top-[24%]">
-              <div className="relative aspect-square  w-fit rounded-full bg-primary p-3 font-bold ss:p-[1.5rem] sm:p-[2rem]">
-                <h2 className="text-gradient text-xl sm:text-2xl">
-                  Get <br /> Started
-                </h2>
-                <img
-                  className="absolute top-[1rem] right-[1.4rem] xs:top-[1.8rem] xs:right-[2rem] sm:top-[2.3rem]"
-                  src={arrowUp}
-                />
-              </div>
+
+          <div className="bg-blue-gradient absolute right-0 top-[20%] w-fit rounded-full p-[2px] xs:left-[70%] md:top-[24%]">
+            <div className="relative aspect-square  w-fit rounded-full bg-primary p-3 font-bold ss:p-[1.5rem] sm:p-[2rem]">
+              <h2 className="text-gradient text-xl sm:text-2xl">
+                Get <br /> Started
+              </h2>
+              <img
+                className="absolute top-[1rem] right-[1.4rem] xs:top-[1.8rem] xs:right-[2rem] sm:top-[2.3rem]"
+                src={arrowUp}
+                alt="arrowUp"
+              />
             </div>
-          </a>
+          </div>
         </div>
         <div className="relative md:basis-[50%]">
-          <img className="relative z-[5] w-full" src={robot} />
+          <img className="relative z-[5] w-full" rel="preload" width="568" height="572" src={robot} alt="robot" />
           <div className="absolute top-[70%] left-[28%] z-[0] h-[4rem] w-[50%] bg-gray-400 blur-[7rem] "></div>
           <div className="bg-pink absolute top-[20%] left-[30%] z-[0] h-[40%] w-[145px] blur-[7rem]"></div>
         </div>
       </div>
       <div className="flex flex-wrap justify-center text-white ss:flex-wrap ss:gap-5">
-        {stats.map((Element) => {
+        {stats.map((Element, index) => {
           return (
             <div
+              key={index}
               id={Element.id}
-              className="ss:first:border-r relative w-full ss:w-[45%] md:w-[32%] md:last:border-l"
+              className="relative w-full ss:w-[45%] ss:first:border-r md:w-[32%] md:last:border-l"
             >
               <p className="text-center">
-                <span className="text-3xl font-bold sm:text-4xl">{Element.value}</span>
-                <span className="text-gradient text-xl sm:text-2xl">{Element.title}</span>
+                <span className="text-3xl font-bold sm:text-4xl">
+                  {Element.value}
+                </span>
+                <span className="text-gradient text-xl sm:text-2xl">
+                  {Element.title}
+                </span>
               </p>
             </div>
           );

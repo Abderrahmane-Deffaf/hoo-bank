@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
 
 const Button = () => {
   return (
     <>
-      <button className="w-fit bg-blue-gradient text-black font-semibold rounded-[10px]  p-4 md:text-2xl">Get Started</button>
+      <button className="bg-blue-gradient w-fit rounded-[10px] p-4 font-semibold  text-black md:text-2xl">
+        Get Started
+      </button>
     </>
   );
-}
+};
 
-export default Button
+export default Button;

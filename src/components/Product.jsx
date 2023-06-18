@@ -1,11 +1,11 @@
 import React from "react";
-import { bill, google, apple } from "../assets";
+import { bill, google, apple } from "..";
 
 const Product = () => {
   return (
-    <div className="p-[1rem] flex flex-col md:flex-row" id="Products">
+    <div className="flex flex-col p-[1rem] md:flex-row" id="Products">
       <div className="w-full md:basis-[50%]">
-        <img src={bill} alt="bill illustration"/>
+        <img src={bill} alt="bill illustration" />
       </div>
       <div className="flex flex-col gap-5 md:basis-[50%] md:justify-center md:gap-[2rem]">
         <h2 className="text-3xl font-bold text-white ss:text-4xl md:text-5xl">
@@ -18,13 +18,13 @@ const Product = () => {
         </p>
         <ul className="flex w-full gap-5">
           <li>
-            <a>
-              <img  src={apple} alt="apple store logo" />
+            <a href="https://apple.com">
+              <img width="139" height="46.33" src={apple} loading="lazy" alt="apple store logo" />
             </a>
           </li>
           <li>
-            <a>
-              <img src={google} alt="google play logo" />
+            <a href="https://google.com">
+              <img src={google} width="145" height="44" loading="lazy" alt="google play logo" />
             </a>
           </li>
         </ul>

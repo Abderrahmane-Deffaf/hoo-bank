@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { navLinks } from "../constants/constants";
 import ".././index.css";
-import { close, menu,logo } from "../assets";
+import { close, menu, logo } from "..";
 
 const Navbar = () => {
   const [drop, setDrop] = useState(false);
@@ -41,12 +41,15 @@ const Navbar = () => {
       </ul>
 
       <ul className="bg-black-gradient absolute top-[100%] z-[6] flex w-[90%] flex-col gap-[1rem] rounded-[20px] text-white ss:relative ss:w-[60%] ss:flex-row ss:justify-end ss:gap-5 ss:bg-none">
-        {navLinks.map((Element) => {
+        {navLinks.map((Element, index) => {
           if (drop || window.innerWidth >= 600) {
             return (
-              <li className="w-fit text-center first:mt-5 last:mb-5 ss:first:mt-0 ss:last:mb-0">
+              <li
+                key={index}
+                className="w-full text-center first:mt-5 last:mb-5 flex  justify-center ss:first:mt-0 ss:last:mb-0"
+              >
                 <a
-                  className="text-xl sm:text-2xl "
+                  className="text-xl sm:text-2xl  "
                   href={Element.href}
                   id={Element.id}
                 >
